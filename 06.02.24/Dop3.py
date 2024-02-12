@@ -1,14 +1,13 @@
 def line(s, t):
-    if '+' in s:
-        equation = float(s[:s.find('x')]) * float(t[:t.find(';')]) + float(s[s.find('+')])
+    x, y = map(int, t.split(':'))
+    k, b = s.split('x')
+    k = int(k)
+    b = int(b)
+    if y == k * x + b:
+        print(True)
     else:
-        aaa = s[s.find('x'):]
-        equation = float(s[:s.find('x')]) * float(t[:t.find(';')]) + float(aaa[aaa.find('-')])
-        if float(t[:t.find(';') + 1:]) == equation:
-            print(True)
-
-        else:
-            print(False)
+        print(False)
 
 
-line("1x+6", "1;7")
+result = line('1x+6', '1:7')
+print(result)

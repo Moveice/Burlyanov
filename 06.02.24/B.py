@@ -1,4 +1,8 @@
+def d_dig(a):
+    dig = str(a)
+    for st in dig:
+        print(st)
+
+
 a = int(input('Введите натуральное число: '))
-chis = str(a)
-for st in chis:
-    print(st)
+d_dig(a)

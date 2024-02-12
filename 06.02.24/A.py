@@ -1,3 +1,7 @@
+def d_line(n):
+    line = n * '-'
+    print(line)
+
+
 n = int(input('Введите N: '))
-L = n * '-'
-print(L)
+d_line(n)
